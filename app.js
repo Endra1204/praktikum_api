@@ -9,9 +9,12 @@ app.use(express.json());
 app.get('/', (req, res) => res.send('API aktif!'));
 
 // tambahkan routing kamu dibawah sini
-const productRoutes = require('./routes/product.route');
 
+const userRoutes = require('./routes/user.route');
+const productRoutes = require('./routes/product.route');
 app.use('/api/products', productRoutes);
+app.use('/api/users', userRoutes);
+
 
 
 // Koneksi ke database
